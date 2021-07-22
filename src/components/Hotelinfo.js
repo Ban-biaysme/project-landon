@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import serviceLinkData from './data/services_link_data.json';
+import accessibilityLinkData from './data/accessibility_link_data.json';
 
 function Hotelinfo() {
     return (
@@ -23,21 +25,10 @@ function Hotelinfo() {
             <h2>Services and Amenities</h2>
             <p>Our services and amenities are designed to make your travel easy, your stay comfortable, and your experience one-of-a-kind.</p>
             <ul>
-                <li>Indoor pool</li>
-                <li>24-hour fitness center</li>
-                <li>Massage therapy</li>
-                <li>Full service spa</li>
-                <li>In-room jacuzzi tubs</li>
-                <li>Rooftop café  &amp; smoothie bar</li>
-                <li>Coffee bar  &amp; pastry shop</li>
-                <li>Traditional continental breakfast</li>
-                <li>24-hour concierge service</li>
-                <li>Business center</li>
-                <li>Complimentary wireless service</li>
-                <li>Laundry &amp; dry cleaning service</li>
-                <li>Daily paper</li>
-                <li>Certified "green" hotel</li>
-                <li>Pet-friendly rooms  &amp; common areas</li>
+                {
+                    serviceLinkData.map((link)=>
+                        <li>{link.text}</li>)
+                }
             </ul>
             </section>
             
@@ -45,7 +36,11 @@ function Hotelinfo() {
             <h2>Accessibility</h2>
             <p>We're committed to maintaining the same quality of service for every individual. We offer the following facilities for those with special needs:</p>
                 <ul>
-                <li>Grab bars on tub walls</li>
+                    {
+                        accessibilityLinkData.map((link) =>
+                        <li>{link.text}</li> )
+                    }
+                {/* <li>Grab bars on tub walls</li>
                 <li>Shower chairs</li>
                 <li>Hand held shower sprayers</li>
                 <li>Higher toilets &amp; toilet modifiers</li>
@@ -57,7 +52,7 @@ function Hotelinfo() {
                 <li>Telephone amplification handsets</li>
                 <li>Closed captioned television converters</li>
                 <li>Vibrating alarm clocks</li>
-                <li>Telephones with volume control</li>
+                <li>Telephones with volume control</li> */}
                 </ul>
             </section>
        </article>
