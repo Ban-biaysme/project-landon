@@ -40,19 +40,6 @@ function Hotelinfo() {
                         accessibilityLinkData.map((link) =>
                         <li>{link.text}</li> )
                     }
-                {/* <li>Grab bars on tub walls</li>
-                <li>Shower chairs</li>
-                <li>Hand held shower sprayers</li>
-                <li>Higher toilets &amp; toilet modifiers</li>
-                <li>Lower sink faucet handles</li>
-                <li>Wheelchair clearance under sinks &amp; vanity</li>
-                <li>Lower racks in closet</li>
-                <li>TDD machines</li>
-                <li>Telephone light signalers  &amp; smoke alarms</li>
-                <li>Telephone amplification handsets</li>
-                <li>Closed captioned television converters</li>
-                <li>Vibrating alarm clocks</li>
-                <li>Telephones with volume control</li> */}
                 </ul>
             </section>
        </article>
