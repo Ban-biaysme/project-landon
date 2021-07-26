@@ -1,7 +1,21 @@
-import React from 'react';
-import welcomeLinkData from './data/welcome_links.json';
+import React, {useState, useEffect } from 'react';
+// import welcomeLinkData from './data/welcome_links.json';
 
 function Welcome() {
+
+    const [welcomeLinkData, setWelcomeLinkData]= useState([]);
+    
+    const loadGalleryImagesData = async() => {
+        const resp= await fetch('https://ut4fx9zqd2.execute-api.ap-southeast-2.amazonaws.com/Production/gelleryImages');
+        const jsonData= await resp.json();
+        setWelcomeLinkData(jsonData);
+    }
+
+    useEffect(()=>{
+        // Load gallery images links data from api gateway
+        loadGalleryImagesData();
+      },[]);
+
     return (
         <div className="scene" id="welcome">
         <article className="content">
